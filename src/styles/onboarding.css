@@ -1,0 +1,84 @@
+/* Onboarding Page Wrapper */
+
+.onboarding-page {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Carousel container */
+.onboarding-wrapper {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.10);
+}
+
+/* Make carousel slides nicer */
+.onboarding-slide-content {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.onboarding-slide-content h2 {
+  font-size: 26px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.onboarding-slide-content p {
+  color: #475569;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.onboarding-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.onboarding-btn:hover {
+  background: #1e40af;
+}
+
+.onboarding-skip-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #e2e8f0;
+  color: #1e293b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.onboarding-skip-btn:hover {
+  background: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .onboarding-wrapper {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .onboarding-slide-content h2 {
+    font-size: 22px;
+  }
+}

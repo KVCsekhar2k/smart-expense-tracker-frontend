@@ -1,0 +1,29 @@
+/* Analytics Page Styles */
+
+.analytics-page {
+  margin-top: 20px;
+}
+
+.analytics-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+/* Card layout for charts and timeline */
+.analytics-section {
+  margin-top: 20px;
+}
+
+/* Optional: If you want spacing between Charts and Timeline */
+.analytics-page > *:not(:first-child) {
+  margin-top: 24px;
+}
+
+/* Responsive spacing */
+@media (max-width: 480px) {
+  .analytics-title {
+    font-size: 22px;
+  }
+}

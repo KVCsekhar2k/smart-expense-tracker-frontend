@@ -1,0 +1,103 @@
+/* Filters Card */
+.filters-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+  margin-top: 20px;
+}
+
+/* Row layout */
+.filters-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Buttons row */
+.filters-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Individual field */
+.filter-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.filter-small {
+  width: 160px;
+}
+
+/* Labels */
+.filter-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+/* Input/select styles */
+.filter-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  transition: 0.2s ease;
+  background: #fff;
+}
+
+.filter-input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Buttons */
+.filter-btn {
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #1e40af;
+}
+
+.filter-btn.secondary {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.filter-btn.secondary:hover {
+  background: #cbd5e1;
+}
+
+/* Responsive Layout */
+@media (max-width: 740px) {
+  .filters-row {
+    flex-direction: column;
+  }
+
+  .filter-small {
+    width: 100%;
+  }
+
+  .filters-actions {
+    flex-direction: column;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+}

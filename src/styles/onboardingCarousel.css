@@ -1,0 +1,87 @@
+/* Main container card */
+.onboarding-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.10);
+}
+
+/* Each slide container */
+.onboarding-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slide inner content */
+.onboarding-slide-content {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.onboarding-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.onboarding-text {
+  font-size: 16px;
+  color: #475569;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* Get Started button */
+.onboarding-btn {
+  margin-top: 24px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.onboarding-btn:hover {
+  background: #1e40af;
+}
+
+/* Skip button */
+.onboarding-skip-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  background: #e2e8f0;
+  color: #1e293b;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.onboarding-skip-btn:hover {
+  background: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .onboarding-card {
+    padding: 16px;
+  }
+
+  .onboarding-title {
+    font-size: 22px;
+  }
+
+  .onboarding-text {
+    font-size: 15px;
+  }
+}

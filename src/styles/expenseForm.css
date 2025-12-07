@@ -1,0 +1,90 @@
+/* Expense Form Layout */
+.expense-form {
+  margin-top: 10px;
+}
+
+/* Rows of fields */
+.expense-row {
+  display: flex;
+  gap: 16px;
+}
+
+.mt {
+  margin-top: 14px;
+}
+
+/* Field styling */
+.expense-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* Special small-width fields */
+.amount-field,
+.select-small {
+  width: 150px;
+}
+
+/* Labels */
+.expense-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+/* Inputs, selects, textareas */
+.expense-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  transition: 0.2s ease;
+  background: #fff;
+}
+
+.expense-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* Description textarea */
+.textarea {
+  resize: none;
+}
+
+/* Submit button */
+.expense-submit-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.expense-submit-btn:hover {
+  background: #1e40af;
+}
+
+/* Responsive Layout */
+@media (max-width: 720px) {
+  .expense-row {
+    flex-direction: column;
+  }
+
+  .amount-field,
+  .select-small {
+    width: 100%;
+  }
+}
