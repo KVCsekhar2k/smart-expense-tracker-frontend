@@ -1,87 +1,128 @@
-/* Main container card */
+/* 1. Main Card Container */
 .onboarding-card {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 24px;
+  position: relative;
+  width: 100%;
+  max-width: 420px;       /* Keeps it looking good on large screens */
+  margin: 2rem auto;      /* Centers the card vertically and horizontally */
   background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0px 6px 20px rgba(0,0,0,0.10);
-}
-
-/* Each slide container */
-.onboarding-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Slide inner content */
-.onboarding-slide-content {
-  padding: 30px 20px;
+  border-radius: 32px;    /* Large, modern rounded corners */
+  padding: 40px 24px;     /* Generous internal spacing */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Soft, premium shadow */
   text-align: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;       /* Keeps child elements inside the border radius */
 }
 
+/* 2. Slide Layout & Spacing */
+.onboarding-slide {
+  outline: none; /* Removes blue outline on click for some browsers */
+}
+
+.onboarding-slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px 30px 10px; /* Extra bottom padding for dots */
+  min-height: 300px; /* Ensures consistent height across slides */
+}
+
+/* 3. Typography */
 .onboarding-title {
-  font-size: 26px;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .onboarding-text {
-  font-size: 16px;
-  color: #475569;
-  margin-top: 14px;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 32px;
+  max-width: 90%; /* Prevents text from hitting the very edges */
 }
 
-/* Get Started button */
+/* 4. "Get Started" Primary Button */
 .onboarding-btn {
-  margin-top: 24px;
-  padding: 12px 20px;
-  background: #2563eb;
+  background-color: #111; /* Classic black */
   color: #fff;
-  border-radius: 8px;
   border: none;
-  cursor: pointer;
-  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 16px;
+  font-size: 1rem;
   font-weight: 600;
-  transition: 0.2s ease;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: auto; /* Pushes button to bottom if flex container grows */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .onboarding-btn:hover {
-  background: #1e40af;
+  background-color: #333;
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Skip button */
+.onboarding-btn:active {
+  transform: scale(0.98);
+}
+
+/* 5. "Skip" Secondary Button */
 .onboarding-skip-btn {
-  width: 100%;
-  margin-top: 18px;
-  padding: 12px;
-  background: #e2e8f0;
-  color: #1e293b;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
   border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 500;
+  color: #999;
+  font-size: 0.875rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: color 0.2s ease;
+  z-index: 10;
 }
 
 .onboarding-skip-btn:hover {
-  background: #cbd5e1;
+  color: #111; /* Darkens on hover */
 }
 
-/* Responsive */
+/* 6. Customizing React-Slick Dots (Optional but recommended) */
+.slick-dots {
+  bottom: 10px !important; /* Adjust position */
+}
+
+.slick-dots li button:before {
+  font-size: 10px !important;
+  color: #ddd !important; /* Inactive dot color */
+  opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #111 !important; /* Active dot color */
+}
+
+/* 7. Mobile Responsiveness */
 @media (max-width: 480px) {
   .onboarding-card {
-    padding: 16px;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0; /* Full screen on very small mobile */
+    height: 100vh;    /* Takes full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  .onboarding-slide-content {
+    min-height: auto; /* Let content dictate height on mobile */
   }
 
   .onboarding-title {
-    font-size: 22px;
-  }
-
-  .onboarding-text {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { Routes, Route, Navigate, NavLink } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 
+import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
@@ -21,35 +22,7 @@ function App() {
 
   return (
     <>
-      <nav className="navbar">
-        <div>
-          <strong>Smart Expense Tracker</strong>
-        </div>
-        <div>
-          {user && (
-            <>
-              <NavLink to="/dashboard">Dashboard</NavLink>
-              <NavLink to="/expenses">Expenses</NavLink>
-              <NavLink to="/analytics">Analytics</NavLink>
-              <button
-                style={{ marginLeft: "12px" }}
-                className="secondary"
-                onClick={logout}
-              >
-                Logout
-              </button>
-            </>
-          )}
-          {!user && (
-            <>
-              <NavLink to="/onboarding">Onboarding</NavLink>
-              <NavLink to="/login" style={{ marginLeft: "12px" }}>
-                Login
-              </NavLink>
-            </>
-          )}
-        </div>
-      </nav>
+      <Navbar user={user} logout={logout}/>
 
       <div className="app-container">
         <Routes>

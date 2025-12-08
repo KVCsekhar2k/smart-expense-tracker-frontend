@@ -1,0 +1,119 @@
+/* =============================
+   MAIN NAVBAR
+   ============================= */
+.navbar {
+  width: 100%;
+  background: #0f172a;
+  color: white;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* =============================
+   NAV LINKS (Desktop)
+   ============================= */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-item {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 2px;
+  transition: 0.2s ease;
+}
+
+.nav-item:hover {
+  color: white;
+}
+
+.nav-item.active {
+  color: #ffffff;
+  border-bottom: 2px solid #2563eb;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 8px 14px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #b91c1c;
+}
+
+/* =============================
+   MOBILE TOGGLE BUTTON
+   ============================= */
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  color: #e2e8f0;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =============================
+   RESPONSIVE NAVBAR
+   ============================= */
+@media (max-width: 768px) {
+  /* Show toggle on mobile */
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #1e293b;
+    flex-direction: column;
+    padding: 14px 0;
+    gap: 16px;
+    display: none; /* hidden by default */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+
+  /* When opened */
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
+  .logout-btn {
+    width: 90%;
+    text-align: center;
+  }
+}
