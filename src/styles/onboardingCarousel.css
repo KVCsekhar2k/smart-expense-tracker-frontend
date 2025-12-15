@@ -74,8 +74,8 @@
 /* 5. "Skip" Secondary Button */
 .onboarding-skip-btn {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 28px;
+  right: 28px;
   background: transparent;
   border: none;
   color: #999;

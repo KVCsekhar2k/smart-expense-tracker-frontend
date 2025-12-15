@@ -32,26 +32,24 @@ function OnboardingCarousel({ onDone }) {
 
   return (
     <div className="onboarding-card">
-  <Slider {...settings}>
-    {slides.map((s, index) => (
-      <div key={index} className="onboarding-slide">
-        <div className="onboarding-slide-content">
-          <h2 className="onboarding-title">{s.title}</h2>
-          <p className="onboarding-text">{s.text}</p>
+    <Slider {...settings}>
+      {slides.map((s, index) => (
+        <div key={index} className="onboarding-slide">
+          <div className="onboarding-slide-content">
+            <h2 className="onboarding-title">{s.title}</h2>
+            <p className="onboarding-text">{s.text}</p>
 
-          {index === slides.length - 1 && (
-            <button className="onboarding-btn" onClick={onDone}>
-              Get Started
-            </button>
-          )}
+            {index === slides.length - 1 && (
+              <button className="onboarding-btn" onClick={onDone}>
+                Get Started
+              </button>
+              
+            )}
+            
+          </div>
         </div>
-      </div>
-    ))}
-  </Slider>
-
-  <button className="onboarding-skip-btn" onClick={onDone}>
-    Skip
-  </button>
+      ))}
+    </Slider>
 </div>
 
   );
